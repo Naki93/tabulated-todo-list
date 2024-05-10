@@ -1,0 +1,35 @@
+<!-- This tells the browser that this is an HTML5 document. The type of document is an HTML5 document-Hyper Text Markup language -->
+<!DOCTYPE html>
+<!-- This is the opening tag for the HTML document and specifies that the language used is English. -->
+<html lang="en">
+    <!-- This part of the document contains meta-information about the page, like the title, character encoding, and stylesheets. -->
+<head>
+    <!-- This specifies the character encoding used in the document, ensuring that special characters are displayed correctly. -->
+    <meta charset="UTF-8">
+    <!-- This sets the viewport properties, which helps the page adapt to different devices and screen sizes. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Todo list</h1>
+    <form id="todoForm">
+        <input type="text" id="taskInput" placeholder="Add a new task">
+        <button type="submit">Add Task</button>
+    </form>
+    <!-- <ul id="taskList"></ul> -->
+    <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="taskList">
+          <!-- Tasks will be dynamically added here -->
+        </tbody>
+      </table>
+      
+<script src="script.js"></script> 
+</body>
+</html>

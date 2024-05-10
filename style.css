@@ -1,0 +1,52 @@
+/* Style for the task item */
+/* .task-item {
+    position: relative; /* Set position to relative */
+/* } */
+
+
+
+/* .delete{
+    cursor: pointer;
+    background-color: rgba(255, 222, 173, 0.062);
+    border: none;
+    position: absolute; /* Set position to absolute */
+    /* right: calc(50% + 70px); /* Adjust the value as needed */
+    /* top: 50%; /* Position the button vertically centered */
+    /* transform: translateY(-50%); Center the button vertically */ 
+    /* position: relative; /* Set position to relative */
+    /* left: 20px; Adjust the value as needed */ 
+/* }  */
+
+/* body{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list.style{
+    list-style: none;
+}
+
+ul{
+    list-style: none;
+}
+ */
+
+ table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.delete
+{
+    margin-right: 5px;
+}
+
