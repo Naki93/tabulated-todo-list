@@ -5,6 +5,9 @@ const form = document.getElementById("todoForm")
 const taskInput = document.getElementById("taskInput")
 const taskList = document.getElementById("taskList")
 
+ // Load tasks from localStorage when the page loads
+ loadTasks();
+
 // This sets up an event listener that listens for the form's submit event. When the form is submitted (i.e., when the user clicks the "Add Task" button or presses Enter), the provided function is called.
 form.addEventListener('submit', function(event){
     // This prevents the default behavior of the form submission, which would cause the page to reload.
@@ -13,6 +16,7 @@ form.addEventListener('submit', function(event){
     if(taskText !== ""){
         addTask(taskText)
         taskInput.value = '';
+        saveTasks()
     }
 
     
@@ -42,6 +46,7 @@ function addTask(taskText){
      deleteButton.addEventListener('click', function () {
     //  taskItem.remove();
     taskRow.remove()
+    saveTasks()
      });
 
     //  taskItem.appendChild(deleteButton);
@@ -53,6 +58,26 @@ function addTask(taskText){
     taskRow.appendChild(actionCell);
     // Append row to the task list
     taskList.appendChild(taskRow);
+}
+
+function loadTasks() {
+//     taskRows = innerHTML = "";
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.forEach(taskText => addTask(taskText));
+// while (taskList.firstChild) {
+//     taskList.removeChild(taskList.firstChild);
+// }
+ }
+
+function saveTasks() {
+    const taskRows = document.querySelectorAll('#taskList tr');
+
+    const tasks = [];
+    taskRows.forEach(taskRows => {
+        // tasks.push(taskRows.textContent);
+        tasks.push(taskRows.firstElementChild.textContent);
+    });
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 })

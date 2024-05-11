@@ -17,24 +17,49 @@
     /* left: 20px; Adjust the value as needed */ 
 /* }  */
 
-/* body{
-    background-color: bisque;
+ body{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+} 
+
+input{
+
+    border:none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
 }
 
-.list.style{
+button{
+    border:none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+td{
+    cursor: pointer;
+}
+
+
+
+form{
+    padding-bottom: 20px;
+    margin-right: 10px;
+}
+
+ .list.style{
     list-style: none;
 }
 
 ul{
     list-style: none;
 }
- */
+ 
 
- table {
+  table {
     width: 50%;
     border-collapse: collapse;
 }
@@ -48,5 +73,5 @@ th, td {
 .delete
 {
     margin-right: 5px;
-}
-
+} 
+ 
